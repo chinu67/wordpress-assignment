@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Little Miami Brewing Company</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" id="google-fonts-css" href="//fonts.googleapis.com/css?family=Noto+Sans%3A400%2C700%7CBenchNine%3A300%2C400%2C700&amp;ver=6.7.1" type="text/css" media="all">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="files/css.css"/>
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
   <style>
     * {
       margin: 0;
@@ -12,12 +17,17 @@
       box-sizing: border-box;
     }
     body {
-      font-family: Arial, sans-serif;
+      font-family: BenchNine, Arial, sans-serif;
     }
     .container {
       max-width: 1440px;
       margin: 0 auto;
     }
+
+    footer {
+  background-color: #000;
+  margin-top: auto;
+}
 
     .swiper {
       width: 100%;
@@ -137,6 +147,26 @@
   color: white;
 }
 
+.location {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .location-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .location iframe {
+    border: 0;
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+  }
+
 .newsletter-inner {
   max-width: 1120px;
   margin: 0 auto;
@@ -181,6 +211,206 @@
   cursor: pointer;
 }
 
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 60px;
+  background-color: #111;
+  gap: 30px;
+  color: white;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 0 20px;
+  min-width: 250px;
+}
+
+.footer-column h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  margin: 6px 0;
+  display: block;
+}
+
+
+.hours-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+  padding: 6px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer-column ul.hours {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.footer-column ul.hours li {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+}
+
+.social-icons i {
+  font-size: 20px;
+  margin-right: 10px;
+  background-color: white;
+  color: #000;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.footer-bottom {
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  background-color: #3c7f94;
+  text-align: center;
+}
+
+.footer-bottom nav {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-bottom nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column ul.hours li span,
+.footer-column ul.hours li strong {
+  color: white;
+}
+
+.social-icons i {
+  font-size: 20px;
+  margin-right: 10px;
+  background-color: white;
+  color: #000;
+  padding: 8px;
+  border-radius: 3px;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #fff;
+  color: #000;
+  padding: 6px 8px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.footer-left {
+  color: #d4e6f1;
+  margin-bottom: 10px;
+  flex: 1;
+  min-width: 200px;
+
+  
+.footer-right {
+  flex: 1;
+  text-align: right;
+  min-width: 200px;
+}
+
+
+.footer-right a {
+  color: #e6f1f7;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+
+/* === RESPONSIVE STYLES === */
+@media (max-width: 768px) {
+  .newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .email-signup {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .footer-column {
+    margin: 20px 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .footer-bottom nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-right {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .footer-right a {
+    display: inline-block;
+    margin: 5px 10px 0 0;
+  }
+}
 @media (max-width: 991px) {
   .newsletter-inner {
     flex-direction: column;
@@ -272,6 +502,21 @@
   <a href="#">Get Directions&gt;&gt;</a>
 </section>
 
+<div class="elfsight-app-e72ebbd5-99ea-47de-b8c6-be4dc20450db" data-elfsight-app-lazy></div>
+
+<section class="location">
+  <h2>Our Location</h2>
+  <div class="location-flex">
+    <iframe src="https://maps.google.com/maps?q=Milford%20Ohio&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+    <div class="location-info">
+      <p>Dinner: Sun–Thu: 4–10 PM, Fri–Sat: 4–11 PM</p>
+      <p>Lunch: Fri–Sat: 4–11 PM</p>
+      <p>Brunch: Fri–Sat: 4–11 PM</p>
+      <p>Takeout: 65 Lewis Street, East Boston, MA 02128</p>
+    </div>
+  </div>
+</section>
+
 <section class="newsletter-section">
   <div class="newsletter-inner">
     <div class="newsletter-text">
@@ -285,8 +530,58 @@
   </div>
 </section>
 
+<div class="footer-main">
+  <div class="footer-column">
+    <h3>OUR LOCATION</h3>
+    <p>208 Mill Street,<br>Milford, Ohio 45150</p>
+    <p>Group Reservations: <a href="mailto:reserve@littlemiamibrewing.com">reserve@littlemiamibrewing.com</a></p>
+    <p>Band Inquiries/Lost Items: <a href="mailto:joe@littlemiamibrewing.com">Joe@littlemiamibrewing.com</a></p>
+    <p>Event Center Coordinator: <strong>513-680-1570</strong></p>
+    <p>Taproom/Brewery Phone: <strong>513-713-1121</strong></p>
+  </div>
+
+  <div class="footer-column">
+    <h3>TAPROOM HOURS. KITCHEN CLOSES 1 HOUR EARLIER</h3>
+    <ul class="hours">
+      <li><strong>Monday</strong> <span>11am - 10pm</span></li>
+      <li><strong>Tuesday</strong> <span>11am - 11pm</span></li>
+      <li><strong>Wednesday</strong> <span>11am - 11pm</span></li>
+      <li><strong>Thursday</strong> <span>11am - 11pm</span></li>
+      <li><strong>Friday</strong> <span>11am - 12am</span></li>
+      <li><strong>Saturday</strong> <span>11am - 12am</span></li>
+      <li><strong>Sunday</strong> <span>11am - 10pm</span></li>
+    </ul>
+  </div>
+
+  <div class="footer-column">
+    <h3>FOLLOW US</h3>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:info@littlemiamibrewing.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="footer-bottom">
+  <div class="footer-left">
+    © 2017–2024 All Rights Reserved. Little Miami Brewing Company.
+  </div>
+   
 
 
+  <div class="footer-right">
+    <a href="#">Home</a>
+    <a href="#">Beers</a>
+    <a href="#">Food Menu</a>
+    <a href="#">Hours</a>
+    <a href="#">Taproom</a>
+    <a href="#">Live Music</a>
+    <a href="#">Store</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
