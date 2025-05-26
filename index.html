@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Miami Brewing Company</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .swiper {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .swiper-slide img {
+      width: 100%;
+      display: block;
+    }
+    .swiper-button-prev, .swiper-button-next {
+      color: white;
+    }
+    .swiper-pagination {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      background: transparent;
+      border: 2px solid white;
+      border-radius: 50%;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      background: white;
+    }
+
+    .info-section {
+      background-color: #56a7d6;
+      padding: 70px 20px;
+    }
+    .info-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .info-box {
+      flex: 1 1 45%;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+    .info-box img {
+      width: 100%;
+      display: block;
+    }
+    .info-box span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .video-section {
+      padding: 70px 20px;
+    }
+    .video-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .video-box {
+      flex: 1 1 calc(50% - 20px);
+      max-width: 540px;
+      aspect-ratio: 16 / 9;
+    }
+    .video-box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .details-section {
+      max-width: 1120px;
+      margin: 70px auto;
+      padding: 0 20px;
+    }
+    .details-section h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .details-section h3 {
+      font-size: 30px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .details-section p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .details-section a {
+      color: #007BFF;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+.newsletter-section {
+  background-color: #56a7d6;
+  padding: 30px 20px;
+  color: white;
+}
+
+.newsletter-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.newsletter-text h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.newsletter-text p {
+  font-size: 13px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 220px;
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+  font-size: 12px;
+}
+
+.newsletter-form button {
+  background: white;
+  border: none;
+  padding: 10px 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .newsletter-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .newsletter-form {
+    width: 100%;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/hero-banner.jpg" alt="Slide 1"></div>
+        <div class="swiper-slide"><img src="img/hero-banner.jpg" alt="Slide 2"></div>
+        <div class="swiper-slide"><img src="img/hero-banner.jpg" alt="Slide 3"></div>
+        <div class="swiper-slide"><img src="img/hero-banner.jpg" alt="Slide 4"></div>
+        <div class="swiper-slide"><img src="img/hero-banner.jpg" alt="Slide 5"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <section class="info-section">
+    <div class="info-inner">
+      <div class="info-box">
+        <img src="img/taproom.jpg" alt="Visit Our Taproom">
+        <span>&#128205; VISIT OUR TAPROOM</span>
+      </div>
+      <div class="info-box">
+        <img src="img/events.jpg" alt="Upcoming Events">
+        <span>&#128197; UPCOMING EVENTS</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="video-inner">
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+      </div>
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+      </div>
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+<section class="details-section">
+  <h2>CINCINNATI BREWERY, PIZZA, AND EVENT CENTER</h2>
+  <p>Little Miami Brewing Company is a Cincinnati Brewery nestled in the heart of historic Old Milford, Ohio, on the banks of the scenic Little Miami River.</p>
+  <p>You’ll love this Cincinnati brewery, where passion for craft beer meets good times and great food.</p>
+
+  <h3>CRAFT BEER</h3>
+  <p>Since 2017, <a href="#">we’ve been dedicated to brewing award winning small-batch craft beer</a>, made with fresh, local ingredients whenever possible. Explore our ever-changing lineup of brews, from hoppy IPAs to crisp lagers, and everything in between. Find what’s on tap at the finest</p>
+  <a href="#">Find What’s On Tap&gt;&gt;</a>
+
+  <h3>DELICIOUS FOOD</h3>
+  <p>Our kitchen dishes up mouth-watering pizzas, salads, pretzels, chili, and nachos, perfect for pairing with your favorite beer. Check out our menu and discover why we are the go-to brewery in Cincinnati</p>
+  <a href="#">View Our Menu&gt;&gt;</a>
+
+  <h3>VIBRANT TAPROOM</h3>
+  <p>Pull up a seat in our inviting taproom, where you can relax with friends, catch a Bengals or Reds game on TV, or enjoy live music on select nights. Little Miami Brewing Company is the perfect Cincinnati brewery for an unforgettable night out.</p>
+
+  <h3>SCENIC ROOFTOP</h3>
+  <p>Take in the stunning views of the Little Miami River from our rooftop patio, complete with frozen margaritas to keep you cool in the Cincinnati heat. No other brewery in Cincinnati offers such breathtaking views.</p>
+
+  <h3>EVENT CENTER</h3>
+  <p>Planning a celebration? Our spacious <a href="#">Event Center</a> can accommodate weddings, concerts, rehearsals dinners, birthday parties, retirement parties, and more. Host your event at Little Miami Brewing Company, the best brewery in Cincinnati!</p>
+  <p>Whether you’re a craft beer enthusiast, a foodie, or simply looking for a great place to gather with friends, we invite you to experience the Little Miami Brewing Company difference. Cheers!</p>
+  <a href="#">Get Directions&gt;&gt;</a>
+</section>
+
+<section class="newsletter-section">
+  <div class="newsletter-inner">
+    <div class="newsletter-text">
+      <h3>NEWSLETTER</h3>
+      <p>Subscribe to our Newsletter to keep up on the latest news at LMBC.</p>
+    </div>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter Your Email Address" required>
+      <button type="submit">Go</button>
+    </form>
+  </div>
+</section>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+</body>
+</html>
